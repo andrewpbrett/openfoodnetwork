@@ -12,7 +12,7 @@ angular.module("admin.products").factory "VariantUnitManager", ->
         # is changed, a data migration may be necessary to make sure
         # the proper unit X to grams actually works.
         # TODO: ^^^ Delete this
-        453.592: 'lb'
+        453.6: 'lb'
       'volume':
         0.001: 'mL'
         1.0: 'L'
