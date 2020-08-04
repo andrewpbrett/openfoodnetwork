@@ -52,6 +52,7 @@ angular.module("admin.products").factory "OptionValueNamer", (VariantUnitManager
 
       [value, unit_name]
 
+      # TODO: any changes we make in option_value_namer.rb should probably be duplicated here
     scale_for_unit_value: ->
       # Find the largest available unit where unit_value comes to >= 1 when expressed in it.
       # If there is none available where this is true, use the smallest available unit.
