@@ -74,10 +74,8 @@ module OpenFoodNetwork
                               28.34952 => 'oz', 453.6 => 'lb'},
                 'volume' => { 0.001 => 'mL', 1.0 => 'L',  1000.0 => 'kL' } }
 
-      # Find the largest available unit where unit_value comes to >= 1 when expressed in it.
-      # If there is none available where this is true, use the smallest available unit.
       unit = units[@variant.product.variant_unit].select { |scale, _unit_name|
-        @variant.unit_value / scale >= 1
+        @variant.product.variant_unit_scale == scale
       }.to_a.last
       unit = units[@variant.product.variant_unit].first if unit.nil?
 
