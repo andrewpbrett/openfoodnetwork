@@ -34,7 +34,7 @@ angular.module("admin.products").factory "VariantUnitManager", ->
 
       validScales.unshift scale for scale in unitScales when value/scale >= 1
       if validScales.length > 0
-        validScales[0]
+        validScales.pop()
       else
         unitScales[0]
 
@@ -42,4 +42,5 @@ angular.module("admin.products").factory "VariantUnitManager", ->
       @unitNames[unitType][scale]
 
     @unitScales: (unitType) ->
-      (parseFloat(scale) for scale in Object.keys(@unitNames[unitType])).sort()
+      sortScales = (a, b) -> (a > b ? 1 : b < a ? -1 : 0)
+      (parseFloat(scale) for scale in Object.keys(@unitNames[unitType])).sort(sortScales)
