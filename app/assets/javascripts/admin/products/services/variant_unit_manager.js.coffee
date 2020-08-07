@@ -34,7 +34,7 @@ angular.module("admin.products").factory "VariantUnitManager", ->
 
       validScales.unshift scale for scale in unitScales when value/scale >= 1
       if validScales.length > 0
-        validScales.pop()
+        validScales[0]
       else
         unitScales[0]
 
