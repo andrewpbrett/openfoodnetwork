@@ -548,7 +548,7 @@ module Spree
           expect(v.option_values.map(&:name).include?("1L")).to eq(false)
           expect(v.option_values.map(&:name).include?("1g")).to eq(true)
           expect {
-            p.update!(variant_unit: 'volume', variant_unit_scale: 0.001)
+            p.update!(variant_unit: 'volume', variant_unit_scale: 1)
           }.to change(p.master.option_values(true), :count).by(0)
           v.reload
           expect(v.option_values.map(&:name).include?("1L")).to eq(true)
@@ -563,7 +563,7 @@ module Spree
           expect(p.master.option_values.map(&:name).include?("1L")).to eq(false)
           expect(p.master.option_values.map(&:name).include?("1g")).to eq(true)
           expect {
-            p.update!(variant_unit: 'volume', variant_unit_scale: 0.001)
+            p.update!(variant_unit: 'volume', variant_unit_scale: 1)
           }.to change(p.master.option_values(true), :count).by(0)
           p.reload
           expect(p.master.option_values.map(&:name).include?("1L")).to eq(true)
