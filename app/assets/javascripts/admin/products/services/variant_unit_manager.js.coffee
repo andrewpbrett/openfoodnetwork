@@ -42,5 +42,5 @@ angular.module("admin.products").factory "VariantUnitManager", ->
       @unitNames[unitType][scale]
 
     @unitScales: (unitType) ->
-      sortScales = (a, b) -> (a > b ? 1 : b < a ? -1 : 0)
-      (parseFloat(scale) for scale in Object.keys(@unitNames[unitType])).sort(sortScales)
+      (parseFloat(scale) for scale in Object.keys(@unitNames[unitType])).sort (a, b) ->
+        a - b

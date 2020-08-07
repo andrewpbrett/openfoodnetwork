@@ -27,11 +27,11 @@ describe "VariantUnitManager", ->
       expect(VariantUnitManager.getUnitName(1, "volume")).toEqual "L"
       expect(VariantUnitManager.getUnitName(1000, "volume")).toEqual "kL"
 
-  describe "unitScales", ->
-    it "returns a set of scales for unit type weight", ->
+  fdescribe "unitScales", ->
+    it "returns a sorted set of scales for unit type weight", ->
       expect(VariantUnitManager.unitScales('weight')).toEqual [1, 28.34952, 453.6, 1000, 1000000]
 
-    it "returns a set of scales for unit type volume", ->
+    it "returns a sorted set of scales for unit type volume", ->
       expect(VariantUnitManager.unitScales('volume')).toEqual [0.001, 1, 1000]
 
   describe "variantUnitOptions", ->
