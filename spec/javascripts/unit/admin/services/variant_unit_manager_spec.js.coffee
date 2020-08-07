@@ -38,10 +38,10 @@ describe "VariantUnitManager", ->
     it "returns an array of options", ->
       expect(VariantUnitManager.variantUnitOptions()).toEqual [
         ["Weight (g)", "weight_1"],
-        ["Weight (kg)", "weight_1000"],
-        ["Weight (T)", "weight_1000000"],
         ["Weight (oz)", "weight_28.34952"],
         ["Weight (lb)", "weight_453.6"],
+        ["Weight (kg)", "weight_1000"],
+        ["Weight (T)", "weight_1000000"],
         ["Volume (mL)", "volume_0.001"],
         ["Volume (L)", "volume_1"],
         ["Volume (kL)", "volume_1000"],
