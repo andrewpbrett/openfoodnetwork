@@ -78,5 +78,7 @@ Openfoodnetwork::Application.routes.draw do
         end
       end
     end
+
+    match '*path', to: redirect("/api/legacy/%{path}"), via: :all, constraints: { path: /(?!.*legacy).+/ }
   end
 end
