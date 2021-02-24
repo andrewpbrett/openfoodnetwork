@@ -14,7 +14,7 @@ if ENV['DEPENDENCIES_NEXT']
   # bundler command prefixed with `DEPENDENCIES_NEXT=1
   gem 'rails', '> 5.0', '< 5.1'
 
-  gem 'activemerchant', '>= 1.78.0'
+  gem 'activemerchant', '~> 1.107.4'
   gem 'angular-rails-templates', '>= 0.3.0', '< 1.1.0'
   gem 'awesome_nested_set'
   gem 'rails-controller-testing'
@@ -23,7 +23,7 @@ if ENV['DEPENDENCIES_NEXT']
 else
   gem 'rails', '~> 4.2'
 
-  gem 'activemerchant', '~> 1.78.0'
+  gem 'activemerchant', '~> 1.107.4'
   gem 'angular-rails-templates', '~> 0.3.0'
   gem 'awesome_nested_set', '~> 3.4.0'
   gem 'ransack', '~> 1.8.10'
