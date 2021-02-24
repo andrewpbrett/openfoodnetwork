@@ -50,7 +50,7 @@ gem "order_management", path: "./engines/order_management"
 gem 'web', path: './engines/web'
 
 gem 'activerecord-postgresql-adapter'
-gem 'pg', '~> 0.21.0'
+gem 'pg', '~> 1.2.3'
 
 gem 'acts_as_list', '0.9.19'
 gem 'cancancan', '~> 1.7.0'
