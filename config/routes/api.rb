@@ -1,6 +1,6 @@
 Openfoodnetwork::Application.routes.draw do
   namespace :api do
-    namespace :legacy do
+    namespace :v0 do
       resources :products do
         collection do
           get :bulk_products
@@ -79,6 +79,6 @@ Openfoodnetwork::Application.routes.draw do
       end
     end
 
-    match '*path', to: redirect("/api/legacy/%{path}"), via: :all, constraints: { path: /(?!.*legacy).+/ }
+    match '*path', to: redirect("/api/v0/%{path}"), via: :all, constraints: { path: /(?!.*v0).+/ }
   end
 end
